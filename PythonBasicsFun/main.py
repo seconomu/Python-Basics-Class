@@ -48,18 +48,18 @@ print(math.pow(2, 5))
 print("hello world")
 
 # GETTING INPUT FROM THE USER
-print("Enter your favorite number: ")
-favorite_number = input()
-print("Your favorite number is: ", favorite_number)
-print("Your favorite number doubled is: ", 2 * favorite_number)
-print(type(favorite_number))
-# let's say, we really do want favorite_number to be a numeric type
-# e.g. int or float
-# this is called type conversion
-favorite_number_int = int(favorite_number)
-print(type(favorite_number_int))
-print("Your favorite number doubled is:", favorite_number_int * 2, sep="", end=":):)")
-print() 
+# print("Enter your favorite number: ")
+# favorite_number = input()
+# print("Your favorite number is: ", favorite_number)
+# print("Your favorite number doubled is: ", 2 * favorite_number)
+# print(type(favorite_number))
+# # let's say, we really do want favorite_number to be a numeric type
+# # e.g. int or float
+# # this is called type conversion
+# favorite_number_int = int(favorite_number)
+# print(type(favorite_number_int))
+# print("Your favorite number doubled is:", favorite_number_int * 2, sep="", end=":):)")
+# print() 
 
 # FORMATTING floating point numbers
 # a few ways to do this
@@ -68,3 +68,26 @@ print("%.2f" %(math.pi)) # C/C++ styles (old skool)
 print("{:.2f}".format(math.pi)) # Pythonic way
 # this last approach actually rounds the number (you can store it rounded)
 print(round(math.pi, 2))
+
+print(4 / 12)
+# print(3 / 0)
+print(2 ** 4 ** (2 / 4))
+
+# warm up task
+print("Please enter the voltage:")
+voltage = input()
+voltage = float(voltage)
+
+resistance = float(input("Please enter the resistance:"))
+power = voltage ** 2 / resistance
+print("The power is:", power)
+
+# CONDITIONALS (AKA if statements)
+# if some condition (called boolean condition) is true, then
+# execute some code
+x = 7
+if x == 6: # == equality operator (= assignment operator)
+    print("x is 6")
+    # in Python, identation (1 tab or 4 spaces) is used
+    # to group code statements into a block
+    # like { } in C/C++
