@@ -73,3 +73,32 @@ print(candies)
 # list methods 
 candies.remove("reeses")
 print(candies)
+
+# 1D LIST PRACTICE PROBLEM
+random_list = []
+for x in range(20):
+    number = random.randrange(0,11) #randrange is exclusive, so need 11 instead of 10
+    random_list.append(number)
+    # or random_list.append(randrange(0,11))
+print(random_list)
+
+for x in random_list:
+    print(x, end=" ")
+
+print()
+sorted_list = sorted(random_list)
+
+#sorted_list = random_list.sort()
+print(sorted_list)
+
+print("min: ", sorted_list[0], "max: ", sorted_list[-1])
+print()
+print(random_list)
+number = int (input("what is the number? "))
+times = 0
+for x in random_list:
+    if x == number:
+        times += 1
+print(number, " appears ", times, " times.")
+
+
