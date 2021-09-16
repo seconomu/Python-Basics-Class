@@ -110,4 +110,5 @@ for num in numbers:
         count += 1
 print("count:", count)
 
-# -Removes all instances of a user-specified number in the list. If the number is not in the list print the message: "Sorry, your number is not here!"
+# -Removes all instances of a user-specified number in the list. 
+# If the number is not in the list print the message: "Sorry, your number is not here!"
