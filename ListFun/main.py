@@ -73,3 +73,41 @@ print(candies)
 # list methods 
 candies.remove("reeses")
 print(candies)
+
+# 1D LIST PRACTICE PROBLEMS
+'''
+In ListFun, write code that generates 20 random numbers between 1 and 10 inclusive 
+and puts them in a 1D list. The program then does the following using the list:
+'''
+numbers = []
+for _ in range(20):
+    numbers.append(random.randrange(1, 11))
+print("numbers:", numbers)
+
+# -Prints the numbers all one line, each number separated by a space
+def pretty_print(numbers):
+    for num in numbers:
+        print(num, end=" ")
+    print()
+
+pretty_print(numbers)
+
+# -Sorts the list using a list method
+# numbers.sort() # in place sort (changes the order im memory)
+numbers_copy = sorted(numbers)
+pretty_print(numbers_copy)
+
+# -Prints the largest and smallest number in the list
+# --Hint: can you take advantage of the current ordering of your list?
+print("min:", numbers_copy[0], "max:", numbers_copy[-1])
+print("min:", min(numbers), "max:", max(numbers))
+
+# -Determines the number of times a user-specified number is in the list
+user_num = int(input("Please enter a number in [1, 10] to count: "))
+count = 0
+for num in numbers:
+    if num == user_num:
+        count += 1
+print("count:", count)
+
+# -Removes all instances of a user-specified number in the list. If the number is not in the list print the message: "Sorry, your number is not here!"
