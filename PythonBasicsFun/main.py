@@ -33,7 +33,7 @@ print(type(x))
 
 # OPERATORS
 # * is multiplication
-print(4 * 5)
+print(4 * math.pow(5, 2))
 # / is floating point division (this is the "normal" division)
 print(5 / 2)
 # // is integer division (this is just the whole number results of division)
@@ -234,6 +234,37 @@ def compute_circle_area(radius):
 
 compute_circle_area(5)
 
+# example 1: no parameters (call the function, you don't pass any arguments)
+# and no return value
+def say_hello():
+    print("hello!")
+
+# the body of say_hello() only executes when we call the function
+say_hello() # function calll
+for i in range(10):
+    say_hello()
+
+# example 2: one parameter (call the function, we need to supply one argument)
+# and no return value
+def say(message):
+    print(message)
+
+say("hi there") # function call
+say("go zags!")
+say("happy thursday")
+
+# to answer ben's q: python pass by object reference (shallow vs deep copies)
+
+# task: define and call a function that accepts the radius of a circle
+# print the area of the circle
+def compute_circle_area(radius):
+    area = math.pi * radius ** 2
+    print("area:", area)
+
+compute_circle_area(5.0)
+
+# example 3: one parameter, one return value
+# re-solve the previous task, but return the area to the calling code
 def compute_circle_area2(radius):
     area = math.pi * radius ** 2
     return area
@@ -243,6 +274,10 @@ print("result = ", result)
 
 # example 4: one parameter, multiple return values
 
+result = compute_circle_area2(5.0)
+print("result:", result)
+
+# example 4: one parameter, two return values
 def compute_circle_area_and_circumference(radius):
     area = math.pi * radius ** 2
     circumference = 2 * math.pi * radius
@@ -254,4 +289,7 @@ print("result 2: ", result2)
 results = compute_circle_area_and_circumference(5.0)
 print(results)
 
+print("result1:", result1, "result2", result2)
+results = compute_circle_area_and_circumference(5.0)
+print(results, results[0], results[1])
 
