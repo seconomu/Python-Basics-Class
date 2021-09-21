@@ -203,3 +203,55 @@ print("die_roll:", die_roll)
 # calling a function means to execute it
 # reasons to use functions: reusability (define once, call multiple times)
 # also for organization
+
+# help(print)
+# example 1: no parameters(call the function, don't pass any inputs)
+# and no output
+
+def say_hello():
+    print("hello")
+
+# the body of say
+
+say_hello() #function call
+
+for i in range(10):
+    say_hello()
+
+# example 2: one parameter, no return value
+def say(message):
+    print(message)
+
+say("hi there")
+say("go zags")
+say("happy thursday")
+
+# task: define and call a function that accepts the radius of a cirle
+# print the area of the circle
+def compute_circle_area(radius):
+    circle = math.pi * radius ** 2
+    print(circle)
+
+compute_circle_area(5)
+
+def compute_circle_area2(radius):
+    area = math.pi * radius ** 2
+    return area
+
+result = compute_circle_area2(5)
+print("result = ", result)
+
+# example 4: one parameter, multiple return values
+
+def compute_circle_area_and_circumference(radius):
+    area = math.pi * radius ** 2
+    circumference = 2 * math.pi * radius
+    return area, circumference
+
+result1, result2 = compute_circle_area_and_circumference(5.0)
+print("result 1: ", result1)
+print("result 2: ", result2)
+results = compute_circle_area_and_circumference(5.0)
+print(results)
+
+
